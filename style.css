@@ -17,6 +17,8 @@ a{
     align-items: center;
     gap: 40px;
     background-color: var(--background-color);
+    padding: 0 40px;
+    position: relative;
 }
 .navbar_menu{
     display: flex;
@@ -34,3 +36,39 @@ a{
     display: flex;
     gap: 20px;
 }
+.navbar_bars {
+    display: none;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    /* navbar_bars에 position 설정 */
+    position: absolute;
+    right: 8px;
+    top: 15px;
+  }
+@media screen and (max-width: 833px) {
+    .navbar {
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 50px;
+      }
+    .navbar_menu {
+      display: none;
+      flex-direction: column;
+      font-size: 28px;
+      align-items: flex-start;
+    }
+    .navbar_bars {
+        display: block;
+      }
+      .navbar_menu.active {
+        display: flex;
+        padding-top: 50px;
+      }
+      
+      .navbar_links.hide,
+      .navbar_logo.hide {
+        display: none;
+      }
+  }
